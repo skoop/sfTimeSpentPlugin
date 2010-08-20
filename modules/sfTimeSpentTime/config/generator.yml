@@ -1,0 +1,26 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           sfTimeSpentTime
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          sf_time_spent_time
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        title:    Time Management
+        display:  [formatted_day, Project, =time, user, created_at]
+        sort:     [day, desc]
+      filter:  ~
+      form:    ~
+      edit:
+        display:  [project_id, day, time, remark, user_id]
+      new:
+        display:  [project_id, day, time, remark, user_id]

@@ -1,0 +1,30 @@
+sfTimeSpentProject:
+  actAs: [Timestampable]
+  columns:
+    name:
+      type: string(255)
+      unique: true
+    description: string(1000)
+
+sfTimeSpentTime:
+  actAs: [Timestampable]
+  columns:
+    project_id:
+      type: integer
+    day:
+      type: date
+    time:
+      type: decimal(8,2)
+    remark:
+      type: text(255)
+    user_id:
+      type: integer
+  relations:
+    User:
+      class: sfGuardUser
+      local: user_id
+      onDelete: CASCADE
+    Project:
+      class: sfTimeSpentProject
+      local: project_id
+      onDelete: CASCADE
