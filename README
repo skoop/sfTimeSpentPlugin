@@ -1,0 +1,5 @@
+# sfTimeSpentPlugin
+
+This symfony plugin is a (right now) really quick-and-dirty plugin for managing the time I spend on the projects I work on. In The Netherlands all enterpreneurs are required to register all the hours they spend on their company. This plugin will allow simply registration of these hours.
+
+The plugin is still under heavy development. Any changes/improvements are welcome :)
